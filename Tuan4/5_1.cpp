@@ -8,8 +8,6 @@ bool hasRedundantParentheses(const string &exp) {
     
     for (char ch : exp) {
         if (ch == ')') {
-            if (st.empty()) return false;
-            
             char top = st.top();
             st.pop();
             bool isRedundant = true;
